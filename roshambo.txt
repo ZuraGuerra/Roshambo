@@ -1,0 +1,71 @@
+"Roshambo" by Zura Guerra.
+The story genre is "Luck".
+The story headline is "A rock-paper-and-scissors game". The story creation year is 2015.
+The maximum score is 2.
+
+When play begins: 
+silently try switching score notification off;
+now right hand status line is "Roshambo".
+
+The White cube is a room. "You are inside a large glowy white cube, all alone."
+
+The computer is a person in the White cube. The description of the computer is "A fancy TRS-80 looking at you with fiery white uni-pixel eyes.[Paragraph Break]'Wanna play something, human? Just take those ítems and show me the one you prefer.'" Instead of taking the computer, say "Hey, don't even touch me, dude!" 
+
+The rock is a thing in the White cube. The description of the rock is "A cold stone."
+The sheet of paper is a thing in the White cube. The description of the sheet of paper is "A blank sheet of paper."
+The pair of scissors is a thing in the White cube. The description of the pair of scissors is "A silver pair of scissors with the form of an ibis."
+
+Instead of examining the computer:
+	say "A fancy TRS-80 looking at you with fiery white uni-pixel eyes.[Paragraph Break]'Wanna play something, human? Just take those ítems and show me the one you prefer. I know you know how to play rock-paper-and-scissors.'";
+	if a random chance of 1 in 3 succeeds:
+		say "The computer emits a loud 'beep', you suppose it's calculating its answer...";
+	otherwise if a random chance of 1 in 3 succeeds:
+		say "The computer emits a loud 'beep', you suppose it's calculating its answer...";
+		increase the score by 1;
+	otherwise:
+		say "The computer emits a long beep, you suppose it's calculating its answer...";
+		increase the score by 2;
+
+Instead of showing the rock to the computer:
+	if the score is 0:
+		say "A pixelated rock is displayed on the screen.";
+		say "'Arrrgh, a tie! Let's play again!'";
+		end the story;
+	otherwise if the score is 1:
+		say "A white rectangle, which seems to be a sheet of paper, is displayed on the screen.";
+		say "'I win this time!'";
+		end the story;
+	otherwise:
+		say "A pixelated pair of scissors is displayed on the screen.";
+		say "'You won... Let's play again!'";
+		end the story;
+
+Instead of showing the paper to the computer:
+	if the score is 0:
+		say "A pixelated rock is displayed on the screen.";
+		say "'You won... Let's play again!'";
+		end the story;
+	otherwise if the score is 1:
+		say "A white rectangle, which seems to be a sheet of paper, is displayed on the screen.";
+		say "'Arrrgh, a tie! Let's play again!'";
+		end the story;
+	otherwise:
+		say "A pixelated pair of scissors is displayed on the screen.";
+		say "'I win this time!'";
+		end the story;
+ 
+Instead of showing the scissors to the computer:
+	if the score is 0:
+		say "A pixelated rock is displayed on the screen.";
+		say "'I win this time!'";
+		end the story;
+	otherwise if the score is 1:
+		say "A white rectangle, which seems to be a sheet of paper, is displayed on the screen.";
+		say "'You won... Let's play again!'";
+		end the story;
+	otherwise:
+		say "A pixelated pair of scissors is displayed on the screen.";
+		say "'Arrrgh, a tie! Let's play again!'";
+		end the story;
+
+
